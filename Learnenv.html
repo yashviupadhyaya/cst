@@ -87,22 +87,38 @@ html {
 
         function lateral() {
             var rotator = document.getElementById('ani');  // change to match image ID
-            var imageDir = 'img/lateral/I.svg';                          // change to match images folder
+            var imageDir = 'img/lateral/poa.gif';                          // change to match images folder
       rotator.src = imageDir;
         }
 
-      var video = document.querySelector("#videoElement");
+      // var video = document.querySelector("#videoElement");
 
-      if (navigator.mediaDevices.getUserMedia) {
-        navigator.mediaDevices.getUserMedia({ video: true })
-          .then(function (stream) {
-            video.srcObject = stream;
-          })
-          .catch(function (err0r) {
-            console.log("Something went wrong!");
-          });
-      }
+      // if (navigator.mediaDevices.getUserMedia) {
+      //   navigator.mediaDevices.getUserMedia({ video: true })
+      //     .then(function (stream) {
+      //       video.srcObject = stream;
+      //     })
+      //     .catch(function (err0r) {
+      //       console.log("Something went wrong!");
+      //     });
+      // }
 
+      // function vbtn(){
+      // 	var openv = document.getElementById("showVideo");
+      // 	openv.style.height = 200px
+      // }
+
+// function removeElement(showVideo) {
+//     // Removes an element from the document
+//     var element = document.getElementById(showVideo);
+//     element.parentNode.removeChild(element);
+// }
+
+    function mouseOver() {
+    document.getElementById('showVideo').style.width="0px";
+    document.getElementById('showVideo').style.width="0px";
+    document.getElementById('showVideo').style.padding="0px";
+    }   
 
 </script>
 
@@ -114,7 +130,7 @@ html {
     <div class="container-fluid d-flex row" style="justify-content: center; ">
 
         <div class="col-lg-3">
-      <a href="UserProfile.html" class="get-started">
+      <a href="Sounds.html" class="get-started">
         <img src="img/btn/back.svg" style="height: 4rem; width: 4rem;"></a>
     </div>
         <div class="col-lg-1"></div>
@@ -146,7 +162,7 @@ html {
         <div class="row" style="margin-top: 2rem;" >
 
           <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100" style="max-height: 20rem;">
-            <div class="info" style="padding: 0rem; border-color: white; border-radius: 1rem; background-image: url('img/II.gif'); background-repeat: no-repeat center fixed; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover; background-size:cover;">
+            <div class="info" style="padding: 0rem; border-color: white; border-radius: 1rem; background-image: url('img/II.jpg'); background-repeat: no-repeat center fixed; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover; background-size:cover;">
             </div>
           </div>
 
@@ -155,9 +171,9 @@ html {
 
               <div class="row">
                 <div class="col-lg-9" style="padding: 0rem; margin-top: auto; margin-bottom: auto;">
-                  <div class="row" style="justify-content: center;">
-              <span class="img-container "> <img src="img/front/I.gif"  id="ani" frameborder="0" style="border:0; height: auto; width: 80%;" ></span>
-              </div></div>
+<!--                   <div class="row" style="justify-content: center;">
+ -->              <span class="img-container "> <img src="img/front/I.gif"  id="ani" frameborder="0" style="border:0; height: 100%; width: 100%; margin:0.5rem 0rem 0rem 3rem; border-radius: 1rem;" ></span>
+              </div><!-- </div> -->
             </div>
             </div>
         </div>
@@ -189,14 +205,14 @@ html {
               </div>
 
 
-          <div class="col-lg-4 mt-4 mt-lg-0 d-flex align-items-stretch info" data-aos="fade-up" data-aos-delay="200" style=" border-color: white; border-radius: 1rem;">
-                <div id="container" style="width: 100%; height: auto;  border-color: white; border-radius: 1rem;">
+          <div class="col-lg-4 mt-4 mt-lg-0 d-flex align-items-stretch info" data-aos="fade-up" data-aos-delay="200" style=" border-color: white; border-radius: 1rem; padding: 0px;">
+                <div id="container" style="width: 100%; height: auto;  border-color: white; border-radius: 1rem; padding: 0px;">
 
                   <!-- <video autoplay="true" id="videoElement" frameborder="0" style="border:0;  width: 100%;"> -->
 
                   <!-- </video> -->
-                      <video id="gum-local" autoplay playsinline style="width: 100%;"></video>
-                      <button id="showVideo">Open camera</button>
+                      <video id="gum-local" autoplay playsinline style="width: 100%;  border-radius: 1rem; "></video>
+                      <button id="showVideo"  onclick=" mouseOver()"></button>
                       <!-- <div id="errorMsg"></div> -->
 
           </div></div>
